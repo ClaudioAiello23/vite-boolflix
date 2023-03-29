@@ -18,12 +18,16 @@ export default {
     }
   },
 
-
+  methods: {
+    search() {
+      console.log('sono arrivato, inserire qui la chiamata')
+    }
+  }
 }
 
 </script>
 
 <!-- PARTE HTML -->
 <template>
-  <AppHeader />
+  <AppHeader @inputSearch="search" />
 </template>
