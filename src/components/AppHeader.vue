@@ -1,5 +1,7 @@
 <!-- PARTE VUE JS-->
 <script>
+import { store } from '../store';
+
 import SearchBar from './SearchBar.vue';
 
 export default {
@@ -7,6 +9,13 @@ export default {
     components: {
         SearchBar
     },
+
+    data() {
+        return {
+            store
+        }
+    },
+
     methods: {
         search() {
             console.log('ho ascoltato la chiamata di searchBar')
@@ -16,7 +25,7 @@ export default {
 }
 </script>
 
-<!-- PARTE HTML -->
+<!-- PARTE HTML-->
 <template>
     <header>
         <h1>BoolFix</h1>

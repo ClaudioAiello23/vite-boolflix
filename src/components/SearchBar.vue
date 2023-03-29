@@ -1,9 +1,17 @@
 <!-- PARTE VUE JS-->
 <script>
+import { store } from '../store';
 
 export default {
-    name: 'SearchBar'
+    name: 'SearchBar',
+
+    data() {
+        return {
+            store
+        }
+    },
 }
+
 </script>
 
 <!-- PARTE HTML -->
