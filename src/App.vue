@@ -4,12 +4,14 @@ import axios from 'axios'; //richiamo import axios
 import { store } from './store.js' //richiamo collegamento store.js
 
 import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue';
 
 export default {
 
   name: 'App',
   components: {
-    AppHeader
+    AppHeader,
+    AppMain
   },
 
   data() {
@@ -40,4 +42,5 @@ export default {
 <!-- PARTE HTML -->
 <template>
   <AppHeader @inputSearch="search" />
+  <AppMain />
 </template>

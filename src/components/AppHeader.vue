@@ -30,12 +30,6 @@ export default {
     <header>
         <h1>BoolFix</h1>
         <SearchBar @userChoice="choice" />
-        <div class="movie_box" v-for="movie in store.movieResults">
-            <div>{{ movie.title }}</div>
-            <div>{{ movie.original_title }}</div>
-            <div>{{ movie.original_language }}</div>
-            <div>{{ movie.vote_count }}</div>
-        </div>
     </header>
 </template>
 
