@@ -19,7 +19,6 @@ export default {
     methods: {
         choice() {
             console.log('ho ascoltato la chiamata di searchBar, l input utente è ', this.store.searchUser)
-            console.log(this.store.searchUser)
             this.$emit('inputSearch');
         }
     }

@@ -6,14 +6,10 @@ import { reactive } from "vue";
 export const store = reactive(
     {
         config: {
-            apiKey: 'd22b0fdd8de41974c28e8ea0ca771862', //chiave API TMDB per il mio account
-            apiMovies: 'https://api.themoviedb.org/3/search/movie?api_key=',
-            apiTvSeries: 'url',
-            searchUser: '',
-            //esempioArr: [],info da gestire
-            //esempioVar: 0, info da gestire
-            //esempioVar: '', info da gestire
-        }
+            apiMovies: 'https://api.themoviedb.org/3/search/movie?api_key=d22b0fdd8de41974c28e8ea0ca771862&query=', // link API TMDB + chiave API per il mio account tmdb
+            apiTvSeries: 'url', //da aggiornare 
+        },
+        searchUser: '', //valore che l'utente inserisce nel campo input per la ricerca dei film
     })
 
 // Una volta creato store.js, lo richiamo come import nel componente principale APP.vue e nel componente che ne richiede l'utilizzo;

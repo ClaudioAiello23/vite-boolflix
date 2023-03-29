@@ -20,8 +20,18 @@ export default {
 
   methods: {
     search() {
-      console.log('sono arrivato, inserire qui la chiamata')
+      console.log('inserimento', this.store.searchUser)
+      console.log('sono arrivato da AppHeader, inserire qui la chiamata')
+      axios.get(store.config.apiMovies + store.searchUser)
+        .then((response) => {
+          console.log('risposta', response);
+        })
+
     }
+  },
+
+  created() {
+    this.search();
   }
 }
 

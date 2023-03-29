@@ -1,6 +1,4 @@
-# BoolFlix
-
-## Esercizio di questi giorni: BoolFlix
+# Esercizio: BoolFlix
 nome repo: vite-boolflix
 Vi lascio il link a questo documento con tutte le info, suddivise in milestone, su come procedere alla realizzazione.
 https://docs.google.com/document/d/1JBwSbzVo88GBKKUwNTx6fQe7RetT_uw_PTxtGgoQPWI/edit?usp=sharing
