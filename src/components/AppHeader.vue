@@ -6,6 +6,12 @@ export default {
     name: 'AppHeader',
     components: {
         SearchBar
+    },
+    methods: {
+        search() {
+            console.log('ho ascoltato la chiamata di searchBar')
+            //console.log('this.store.searchUser') prova di messaggio al click del bottone
+        }
     }
 }
 </script>
@@ -14,7 +20,7 @@ export default {
 <template>
     <header>
         <h1>BoolFix</h1>
-        <SearchBar />
+        <SearchBar @userChoice="search" />
     </header>
 </template>
 

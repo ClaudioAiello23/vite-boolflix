@@ -1,5 +1,4 @@
 <!-- PARTE VUE JS-->
-
 <script>
 
 export default {
@@ -11,11 +10,11 @@ export default {
 <template>
     <!-- Input ricerca Movies/TVseries -->
     <label for="input_search"></label>
-    <input type="text" id="input_search">
+    <input type="text" id="input_search" v-model="store.searchUser">
     <!-- /Input ricerca Movies/TVseries -->
 
     <!-- Bottone Search -->
-    <button type="submit">Search</button>
+    <button type="submit" @click.prevent="$emit('userChoice')">Search</button>
     <!-- /Bottone Search -->
 </template>
 
