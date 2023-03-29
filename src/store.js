@@ -7,7 +7,7 @@ export const store = reactive(
     {
         config: {
             apiKey: 'd22b0fdd8de41974c28e8ea0ca771862', //chiave API TMDB per il mio account
-            apiMovies: 'url',
+            apiMovies: 'https://api.themoviedb.org/3/search/movie?api_key=',
             apiTvSeries: 'url'
             //esempioArr: [],info da gestire
             //esempioVar: 0, info da gestire
