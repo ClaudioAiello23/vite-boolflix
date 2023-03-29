@@ -17,9 +17,10 @@ export default {
     },
 
     methods: {
-        search() {
-            console.log('ho ascoltato la chiamata di searchBar')
-            //console.log('this.store.searchUser') prova di messaggio al click del bottone
+        choice() {
+            console.log('ho ascoltato la chiamata di searchBar, l input utente è ', this.store.searchUser)
+            console.log(this.store.searchUser)
+            this.$emit('inputSearch');
         }
     }
 }
@@ -29,7 +30,7 @@ export default {
 <template>
     <header>
         <h1>BoolFix</h1>
-        <SearchBar @userChoice="search" />
+        <SearchBar @userChoice="choice" />
     </header>
 </template>
 
