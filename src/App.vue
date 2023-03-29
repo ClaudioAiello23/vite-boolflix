@@ -3,12 +3,12 @@
 import axios from 'axios'; //richiamo import axios
 import { store } from './store.js' //richiamo collegamento store.js
 
-import DefaultComponent from './components/DefaultComponent.vue';
+import AppHeader from './components/AppHeader.vue';
 
 export default {
   name: 'App',
   components: {
-    DefaultComponent
+    AppHeader
   },
   data() {
     return {
@@ -21,5 +21,5 @@ export default {
 
 <!-- PARTE HTML -->
 <template>
-  <DefaultComponent />
+  <AppHeader />
 </template>
