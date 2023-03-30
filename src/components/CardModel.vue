@@ -21,12 +21,18 @@ export default {
 
 <!-- PARTE HTML-->
 <template>
-    <div class="card_box" v-for="movie in store.movieResults">
-        <div>Titolo: {{ movie.title.toUpperCase() }}</div>
-        <div>Titolo originale: {{ movie.original_title.toUpperCase() }}</div>
-        <div>Lingua: {{ movie.original_language.toUpperCase() }}</div>
-        <country-flag country='fr' size='small' />
-        <div>Feedback: {{ movie.vote_average }}</div>
+    <div class="card_container">
+        <div class="card_box" v-for="movie in store.movieResults">
+            <!-- <div v-if="movie.title === true">Titolo: {{ movie.title }}</div>
+                                        <div v-else>Titolo: {{ movie.name }}</div> -->
+            <!-- <div v-if="movie.title != null">Titolo: {{ movie.title }}</div>
+                        <div v-else>{{ movie.name }}</div> -->
+
+            <div>Titolo originale: {{ movie.original_title }}</div>
+            <div>Lingua: {{ movie.original_language }}</div>
+            <country-flag country='it' size='small' /> <!-- da sistemare language-->
+            <div>Feedback: {{ movie.vote_average }}</div>
+        </div>
     </div>
 </template>
 

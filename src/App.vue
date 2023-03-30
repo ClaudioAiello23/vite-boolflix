@@ -20,10 +20,9 @@ export default {
     }
   },
 
-
   methods: {
-    searchMovie() {
-      console.log('inserimento dato utente da AppHeader:', this.store.searchUser)
+    searchMovies() {
+      console.log('Da campo input AppHeader l utente ha inserito: ', this.store.searchUser)
       axios.get(store.config.apiMovies, {
         params: {
           api_key: this.store.config.apiKey, // parametro obbligatorio richiesto dall'API
@@ -31,15 +30,27 @@ export default {
           query: this.store.searchUser // parametro obbligatorio richiesto dall'API
         }
       }).then((response) => {
-        console.log('risposta chiamata API', response);
+        console.log('risposta chiamata API Movies', response);
         this.store.movieResults = response.data.results;
-        console.log('risultati ricerca Movie: ', this.store.movieResults); //nel console log vedo solo 20 risultati, riguarda la pagina?
+        console.log('risultati ricerca Movie: ', this.store.movieResults);
+      })
+
+      axios.get(store.config.apiTvSeries, {
+        params: {
+          api_key: this.store.config.apiKey, // parametro obbligatorio richiesto dall'API
+          language: this.store.config.apiLanguage, // parametro facoltativo richiesto dall'API
+          query: this.store.searchUser // parametro obbligatorio richiesto dall'API
+        }
+      }).then((response) => {
+        console.log('risposta chiamata API Tv Series', response);
+        this.store.movieResults = response.data.results;
+        console.log('risultati ricerca Tv Series: ', this.store.movieResults);
       })
     }
   },
 
   created() {
-    this.searchMovie();
+    this.searchMovies();
   }
 }
 
@@ -47,6 +58,6 @@ export default {
 
 <!-- PARTE HTML -->
 <template>
-  <AppHeader @inputSearch="searchMovie" />
+  <AppHeader @inputSearch="searchMovies" />
   <AppMain />
 </template>
