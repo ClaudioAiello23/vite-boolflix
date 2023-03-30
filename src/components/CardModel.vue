@@ -30,7 +30,9 @@ export default {
             <div v-if="movie.original_title != null">Titolo originale: {{ movie.original_title.toUpperCase() }}</div>
             <div v-else>Titolo originale: {{ movie.original_name.toUpperCase() }}</div>
 
-            <div>Lingua: {{ movie.original_language.toUpperCase() }}</div>
+            <!-- <div>Lingua: {{ movie.original_language.toUpperCase() }}</div> -->
+            <div>Lingua: {{ convertLanguage }}</div>
+
             <country-flag :country="movie.original_language" size='small' />
             <div>Feedback: {{ movie.vote_average }}</div>
 

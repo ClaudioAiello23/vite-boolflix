@@ -20,16 +20,16 @@ export default {
     }
   },
 
-  // computed: {
-  //       convertLanguage() {
-  //           switch (this.original_language) {
-  //               case 'en':
-  //                   return 'gb'
-  //               default:
-  //                   return this.original_language
-  //           }
-  //       }
-  //   },
+  computed: {
+    convertLanguage() {
+      switch (this.original_language) {
+        case 'en':
+          return 'gb'
+        default:
+          return this.original_language
+      }
+    }
+  },
 
   methods: {
     searchMovies() {
