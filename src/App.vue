@@ -26,9 +26,9 @@ export default {
       console.log('inserimento dato utente da AppHeader:', this.store.searchUser)
       axios.get(store.config.apiMovies, {
         params: {
-          api_key: this.store.config.apiKey,
-          language: this.store.config.apiLanguage,
-          query: this.store.searchUser
+          api_key: this.store.config.apiKey, // parametro obbligatorio richiesto dall'API
+          language: this.store.config.apiLanguage, // parametro facoltativo richiesto dall'API
+          query: this.store.searchUser // parametro obbligatorio richiesto dall'API
         }
       }).then((response) => {
         console.log('risposta chiamata API', response);
