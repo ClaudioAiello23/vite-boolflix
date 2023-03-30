@@ -23,6 +23,7 @@ export default {
   methods: {
     searchMovies() {
       console.log('Da campo input AppHeader l utente ha inserito: ', this.store.searchUser)
+      store.movieResults = []; // ogni volta che clicco su Search l'array movieResults parte vuoto; si riempirà con i push dei risultati delle chiamate axios.
       axios.get(store.config.apiMovies, {
         params: {
           api_key: this.store.config.apiKey, // parametro obbligatorio richiesto dall'API
@@ -30,9 +31,9 @@ export default {
           query: this.store.searchUser // parametro obbligatorio richiesto dall'API
         }
       }).then((response) => {
-        console.log('risposta chiamata API Movies', response);
-        this.store.movieResults = response.data.results;
-        console.log('risultati ricerca Movie: ', this.store.movieResults);
+        console.log('risposta chiamata API Movies', response); // mostra in console array API Movies in merito alla ricerca
+        response.data.results.forEach(element =>
+          this.store.movieResults.push(element))
       })
 
       axios.get(store.config.apiTvSeries, {
@@ -42,9 +43,10 @@ export default {
           query: this.store.searchUser // parametro obbligatorio richiesto dall'API
         }
       }).then((response) => {
-        console.log('risposta chiamata API Tv Series', response);
-        this.store.movieResults = response.data.results;
-        console.log('risultati ricerca Tv Series: ', this.store.movieResults);
+        console.log('risposta chiamata API Tv Series', response); // mostra in console array API TV Series in merito alla ricerca
+        response.data.results.forEach(element =>
+          this.store.movieResults.push(element))
+        console.log('risultati ricerca Movies/TvSeries: ', this.store.movieResults); // mostra in console array finale (somma Movies + TvSeries)
       })
     }
   },

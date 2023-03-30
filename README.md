@@ -16,3 +16,7 @@ Ps. usate la vostra api key, non quella delle slide.
 
 ## MILESTONE 2:
 - installare tramite terminale VsCode un pacchetto da NPM contenente le flags; scelto di utilizzare il pacchetto "vue-country-flag-next".
+- configurare l'import del pacchetto nei component in cui intendo utilizzarlo, e dichiararlo nella parte "components".
+- impostare nel component Card Model il tag relativo al pacchetto scaricato, come da indicazioni documentazione.
+- dal component principale App.vue, tramite axios agganciare alla chiamata api Movies già esistente, una ulteriore chiamata api Tv Series per ampliare la ricerca anche alle serie TV.
+- nel component CardModel impostare una v-if per gestire correttamente le chiavi degli oggetti, che nella parte del titolo e titolo originale hanno nomi differenti tra Movies (title, original_title) e TvSeries (name, original_name).
