@@ -3,8 +3,13 @@
 
 import { store } from '../store';
 
+import CardModel from './CardModel.vue';
+
 export default {
     name: 'AppMain',
+    components: {
+        CardModel
+    },
 
     data() {
         return {
@@ -17,22 +22,17 @@ export default {
 <!-- PARTE HTML-->
 <template>
     <main>
-        <div class="movie_box" v-for="movie in store.movieResults">
-            <div>Titolo: {{ movie.title.toUpperCase() }}</div>
-            <div>Titolo originale: {{ movie.original_title.toUpperCase() }}</div>
-            <div>Lingua: {{ movie.original_language.toUpperCase() }}</div>
-            <div>Feedback: {{ movie.vote_count }}</div>
-        </div>
+        <CardModel />
     </main>
 </template>
 
 <!-- PARTE SCSS-->
-<style lang="scss" scoped>
+<style lang="scss">
 main {
-    .movie_box {
+    .card_box {
         border: 2px solid black;
         padding: .625rem;
-        margin-bottom: .625rem;
+        margin: .625rem 0;
 
         div {
             margin-bottom: 5px;

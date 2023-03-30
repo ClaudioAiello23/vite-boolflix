@@ -20,8 +20,9 @@ export default {
     }
   },
 
+
   methods: {
-    search() {
+    searchMovie() {
       console.log('inserimento dato utente da AppHeader:', store.searchUser)
       axios.get(store.config.apiMovies + store.searchUser)
         .then((response) => {
@@ -33,7 +34,7 @@ export default {
   },
 
   created() {
-    this.search();
+    this.searchMovie();
   }
 }
 
@@ -41,6 +42,6 @@ export default {
 
 <!-- PARTE HTML -->
 <template>
-  <AppHeader @inputSearch="search" />
+  <AppHeader @inputSearch="searchMovie" />
   <AppMain />
 </template>

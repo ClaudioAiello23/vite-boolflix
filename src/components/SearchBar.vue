@@ -10,6 +10,8 @@ export default {
             store
         }
     },
+
+    emits: ["userChoice"], // dichiarazione $emit utilizzato nel comoonent, per evitare mex di warning in inspector-console.
 }
 
 </script>
