@@ -15,7 +15,7 @@ export default {
         return {
             store
         }
-    }
+    },
 }
 </script>
 
@@ -25,13 +25,13 @@ export default {
         <div class="card_box" v-for="movie in store.movieResults">
 
             <div v-if="movie.title != null">Titolo: {{ movie.title.toUpperCase() }}</div>
-            <div v-else>Titolo: {{ movie.name }}</div>
+            <div v-else>Titolo: {{ movie.name.toUpperCase() }}</div>
 
             <div v-if="movie.original_title != null">Titolo originale: {{ movie.original_title.toUpperCase() }}</div>
             <div v-else>Titolo originale: {{ movie.original_name.toUpperCase() }}</div>
 
             <div>Lingua: {{ movie.original_language.toUpperCase() }}</div>
-            <country-flag :country="movie.original_language" size='small' /> <!-- da sistemare language-->
+            <country-flag :country="movie.original_language" size='small' />
             <div>Feedback: {{ movie.vote_average }}</div>
 
         </div>

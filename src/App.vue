@@ -20,6 +20,17 @@ export default {
     }
   },
 
+  // computed: {
+  //       convertLanguage() {
+  //           switch (this.original_language) {
+  //               case 'en':
+  //                   return 'gb'
+  //               default:
+  //                   return this.original_language
+  //           }
+  //       }
+  //   },
+
   methods: {
     searchMovies() {
       console.log('Da campo input AppHeader l utente ha inserito: ', this.store.searchUser)
