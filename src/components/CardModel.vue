@@ -16,6 +16,17 @@ export default {
             store
         }
     },
+
+    methods: {
+        convertLanguage(language) {
+            switch (language) {
+                case 'en':
+                    return 'gb'
+                default:
+                    return language
+            }
+        }
+    }
 }
 </script>
 
@@ -30,10 +41,9 @@ export default {
             <div v-if="movie.original_title != null">Titolo originale: {{ movie.original_title.toUpperCase() }}</div>
             <div v-else>Titolo originale: {{ movie.original_name.toUpperCase() }}</div>
 
-            <!-- <div>Lingua: {{ movie.original_language.toUpperCase() }}</div> -->
-            <div>Lingua: {{ convertLanguage }}</div>
+            <div>Lingua: {{ convertLanguage(movie.original_language.toUpperCase()) }}</div>
 
-            <country-flag :country="movie.original_language" size='small' />
+            <country-flag :country="convertLanguage(movie.original_language).toUpperCase()" size='small' />
             <div>Feedback: {{ movie.vote_average }}</div>
 
         </div>
