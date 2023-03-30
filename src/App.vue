@@ -26,9 +26,9 @@ export default {
       console.log('inserimento dato utente da AppHeader:', store.searchUser)
       axios.get(store.config.apiMovies + store.searchUser)
         .then((response) => {
-          console.log('risposta', response);
+          console.log('risposta chiamata API', response);
           this.store.movieResults = response.data.results;
-          console.log('risultati chiamata movie: ', this.store.movieResults); //nel console log vedo solo 20 risultati, riguarda la pagina?
+          console.log('risultati ricerca Movie: ', this.store.movieResults); //nel console log vedo solo 20 risultati, riguarda la pagina?
         })
     }
   },

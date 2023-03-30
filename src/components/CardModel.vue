@@ -20,7 +20,7 @@ export default {
         <div>Titolo: {{ movie.title.toUpperCase() }}</div>
         <div>Titolo originale: {{ movie.original_title.toUpperCase() }}</div>
         <div>Lingua: {{ movie.original_language.toUpperCase() }}</div>
-        <div>Feedback: {{ movie.vote_count }}</div>
+        <div>Feedback: {{ movie.vote_average }}</div>
     </div>
 </template>
 
