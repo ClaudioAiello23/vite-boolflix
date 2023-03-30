@@ -33,7 +33,7 @@ export default {
         }
       }).then((response) => {
         console.log('risposta chiamata API Movies', response); // mostra in console array API Movies in merito alla ricerca
-        response.data.results.forEach(element =>
+        response.data.results.forEach(element => //pusho nell'array movieResults i risultati trovati dalla chiamata API movies
           this.store.movieResults.push(element))
       })
 
@@ -45,7 +45,7 @@ export default {
         }
       }).then((response) => {
         console.log('risposta chiamata API Tv Series', response); // mostra in console array API TV Series in merito alla ricerca
-        response.data.results.forEach(element =>
+        response.data.results.forEach(element => //pusho nell'array movieResults i risultati trovati dalla chiamata API serie tv
           this.store.movieResults.push(element))
         console.log('risultati ricerca Movies/TvSeries: ', this.store.movieResults); // mostra in console array finale (somma Movies + TvSeries)
       })

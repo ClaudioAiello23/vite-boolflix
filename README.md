@@ -24,4 +24,4 @@ Ps. usate la vostra api key, non quella delle slide.
 
 ## MILESTONE 3:
 - il Feedback ricevuto dall'array MovieResults deve essere trasformato in un voto con numero intero da 1 a 5 (invece che da 1 a 10); utilizzare una funzione che divide per 2 il numero iniziale e lo arrotonda all'intero successivo. Dopodichè inserire la funzione nel DOM (component CardModel).
-- trasformare il numero del Feedback in stelle (utilizzare la libreria Font Awesome), in modo che siano sempre presenti 5 stelle per ogni card, e il numero di voto corrisponderà alle stelle piene, la restante parte sarà costituita da stelle vuote.
+- trasformare il numero del Feedback in stelle (utilizzare la libreria Font Awesome), in modo che siano sempre presenti 5 stelle per ogni card, e il numero di voto corrisponderà al numero di stelle piene, mentre il numero di stelle vuote sarà costituito dalla differenza tra il numero di stelle totali (5) e il numero di stelle voto. Utilizzato un ciclo FOR sul dom (component Card Model) per ciclare le stelle fontAwsome.

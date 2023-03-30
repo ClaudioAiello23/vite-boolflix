@@ -29,6 +29,8 @@ export default {
 <!-- PARTE SCSS-->
 <style lang="scss">
 main {
+    background-color: rgb(202, 210, 244);
+
     .card_box {
         border: 2px solid black;
         padding: .625rem;
