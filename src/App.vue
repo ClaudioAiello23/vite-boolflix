@@ -23,13 +23,18 @@ export default {
 
   methods: {
     searchMovie() {
-      console.log('inserimento dato utente da AppHeader:', store.searchUser)
-      axios.get(store.config.apiMovies + store.searchUser)
-        .then((response) => {
-          console.log('risposta chiamata API', response);
-          this.store.movieResults = response.data.results;
-          console.log('risultati ricerca Movie: ', this.store.movieResults); //nel console log vedo solo 20 risultati, riguarda la pagina?
-        })
+      console.log('inserimento dato utente da AppHeader:', this.store.searchUser)
+      axios.get(store.config.apiMovies, {
+        params: {
+          api_key: this.store.config.apiKey,
+          language: this.store.config.apiLanguage,
+          query: this.store.searchUser
+        }
+      }).then((response) => {
+        console.log('risposta chiamata API', response);
+        this.store.movieResults = response.data.results;
+        console.log('risultati ricerca Movie: ', this.store.movieResults); //nel console log vedo solo 20 risultati, riguarda la pagina?
+      })
     }
   },
 

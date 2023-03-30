@@ -6,8 +6,10 @@ import { reactive } from "vue";
 export const store = reactive(
     {
         config: {
-            apiMovies: 'https://api.themoviedb.org/3/search/movie?api_key=d22b0fdd8de41974c28e8ea0ca771862&query=', // link API TMDB + chiave API per il mio account tmdb
+            apiMovies: 'https://api.themoviedb.org/3/search/movie?', // link API TMDB
             apiTvSeries: 'url', //da aggiornare 
+            apiKey: 'd22b0fdd8de41974c28e8ea0ca771862', //chiave API per il mio account tmdb
+            apiLanguage: 'it-IT'
         },
 
         searchUser: '', //valore che l'utente inserisce nel campo input per la ricerca dei film
