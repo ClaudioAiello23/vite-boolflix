@@ -21,3 +21,7 @@ Ps. usate la vostra api key, non quella delle slide.
 - nel Card Model impostare una funzione switch che converta il valore "en" presente nella chiave "lingua originale" dell'array MovieResults" , in valore "gb" per poter stampare la bandiera GB (nel pacchetto flag la codifica EN è differente e nel Dom non veniva mostrata la bandiera in caso di lingua EN).
 - dal component principale App.vue, tramite axios agganciare alla chiamata api Movies già esistente, una ulteriore chiamata api Tv Series per ampliare la ricerca anche alle serie TV.
 - nel component CardModel impostare una v-if per gestire correttamente le chiavi degli oggetti, che nella parte del titolo e titolo originale hanno nomi differenti tra Movies (title, original_title) e TvSeries (name, original_name).
+
+## MILESTONE 3:
+- il Feedback ricevuto dall'array MovieResults deve essere trasformato in un voto con numero intero da 1 a 5 (invece che da 1 a 10); utilizzare una funzione che divide per 2 il numero iniziale e lo arrotonda all'intero successivo. Dopodichè inserire la funzione nel DOM (component CardModel).
+- trasformare il numero del Feedback in stelle (utilizzare la libreria Font Awesome), in modo che siano sempre presenti 5 stelle per ogni card, e il numero di voto corrisponderà alle stelle piene, la restante parte sarà costituita da stelle vuote.

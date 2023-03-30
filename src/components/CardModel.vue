@@ -25,6 +25,11 @@ export default {
                 default:
                     return language
             }
+        },
+
+        convertFeedback(value) {
+            let finalNumber = Math.ceil(value / 2);
+            return finalNumber
         }
     }
 }
@@ -44,7 +49,8 @@ export default {
             <div>Lingua: {{ convertLanguage(movie.original_language.toUpperCase()) }}</div>
 
             <country-flag :country="convertLanguage(movie.original_language).toUpperCase()" size='small' />
-            <div>Feedback: {{ movie.vote_average }}</div>
+
+            <div>Feedback: {{ convertFeedback(movie.vote_average) }}</div>
 
         </div>
     </div>
