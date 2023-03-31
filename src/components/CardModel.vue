@@ -52,29 +52,44 @@ export default {
 
 <!-- PARTE HTML-->
 <template>
-    <div class="card_container">
+    <div class="card_box" v-for="movie in store.movieResults">
+        <div class="poster_box"><img v-bind:src="showImage(movie)" alt="img"></div>
+        <!-- 
+                                                                                <div v-if="movie.title != null">Titolo Movie: {{ movie.title.toUpperCase() }}</div>
+                                                                                <div v-else>Titolo Serie tv: {{ movie.name.toUpperCase() }}</div>
 
-        <div class="card_box" v-for="movie in store.movieResults">
-            <div><img v-bind:src="showImage(movie)" alt="img"></div>
+                                                                                <div v-if="movie.original_title != null">Titolo originale Movie: {{ movie.original_title.toUpperCase() }}</div>
+                                                                                <div v-else>Titolo originale Serie Tv: {{ movie.original_name.toUpperCase() }}</div>
 
-            <div v-if="movie.title != null">Titolo Movie: {{ movie.title.toUpperCase() }}</div>
-            <div v-else>Titolo Serie tv: {{ movie.name.toUpperCase() }}</div>
+                                                                                <div>Lingua: {{ convertLanguage(movie.original_language.toUpperCase()) }}</div>
 
-            <div v-if="movie.original_title != null">Titolo originale Movie: {{ movie.original_title.toUpperCase() }}</div>
-            <div v-else>Titolo originale Serie Tv: {{ movie.original_name.toUpperCase() }}</div>
+                                                                                <country-flag :country="convertLanguage(movie.original_language).toUpperCase()" size='small' />
 
-            <div>Lingua: {{ convertLanguage(movie.original_language.toUpperCase()) }}</div>
+                                                                                <div>Feedback: {{ convertFeedback(movie.vote_average) }}</div>
+                                                                                <font-awesome-icon icon="fa-solid fa-star" v-for="star in convertFeedback(movie.vote_average)" />
+                                                                                <font-awesome-icon icon="fa-regular fa-star" v-for="star in (5 - convertFeedback(movie.vote_average))" /> -->
 
-            <country-flag :country="convertLanguage(movie.original_language).toUpperCase()" size='small' />
-            <!-- da installazione pacchetto country-flag -->
-
-            <div>Feedback: {{ convertFeedback(movie.vote_average) }}</div>
-            <font-awesome-icon icon="fa-solid fa-star" v-for="star in convertFeedback(movie.vote_average)" />
-            <font-awesome-icon icon="fa-regular fa-star" v-for="star in (5 - convertFeedback(movie.vote_average))" />
-
-        </div>
     </div>
 </template>
 
 <!-- PARTE SCSS-->
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.card_box {
+    width: 350px;
+    margin: .625rem;
+
+    .poster_box {
+        width: 350px;
+        border: 1px solid white;
+
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    div {
+        margin-bottom: 5px;
+    }
+}
+</style>

@@ -27,21 +27,14 @@ export default {
 </template>
 
 <!-- PARTE SCSS-->
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../assets/styles/_partials/_variables.scss' as *;
 
 main {
     height: calc($defaultHeight - $headerHeight);
     overflow: auto;
-
-    .card_box {
-        border: 2px solid black;
-        padding: .625rem;
-        margin: .625rem 0;
-
-        div {
-            margin-bottom: 5px;
-        }
-    }
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 </style>
