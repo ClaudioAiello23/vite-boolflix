@@ -18,15 +18,20 @@ export default {
 
 <!-- PARTE HTML -->
 <template>
-    <!-- Input ricerca Movies/TVseries -->
-    <label for="input_search"></label>
-    <input type="text" id="input_search" v-model="store.searchUser">
-    <!-- /Input ricerca Movies/TVseries -->
-
-    <!-- Bottone Search -->
-    <button type="submit" @click.prevent="$emit('userChoice')">Search</button>
-    <!-- /Bottone Search -->
+    <div class="search_box">
+        <label for="input_search"></label>
+        <input type="text" id="input_search" placeholder="cerca il film" v-model="store.searchUser">
+        <button type="submit" @click.prevent="$emit('userChoice')">Search</button>
+    </div>
 </template>
 
 <!-- PARTE SCSS-->
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.search_box {
+
+    input,
+    button {
+        padding: 5px 0;
+    }
+}
+</style>

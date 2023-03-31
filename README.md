@@ -29,4 +29,6 @@ Configurato un metodo che faccia la somma dei 3 link, per restituire il link fin
 - trasformare il numero del Feedback in stelle (utilizzare la libreria Font Awesome), in modo che siano sempre presenti 5 stelle per ogni card, e il numero di voto corrisponderà al numero di stelle piene, mentre il numero di stelle vuote sarà costituito dalla differenza tra il numero di stelle totali (5) e il numero di stelle voto. Utilizzato un ciclo FOR sul dom (component Card Model) per ciclare le stelle fontAwsome.
 
 ## MILESTONE 4:
-- 
+- personalizzazione layout stile APP (visuale: Viewport) con Header che contiene logo e search bar e Main che contiene le cards immagini dei film/serie tv.
+- passando sopra la copertina film col mouse vengono visualizzate le info richieste: titolo, titolo originale, lingua, voti e stelline voto, trama. Utilizzato un display: none per nascondere di base il box delle info, che viene visualizzato in posizione assoluta all'interno della copertina film quando si passa sopra col mouse (la copertina in questo caso viene nascosta).
+

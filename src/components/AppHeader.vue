@@ -30,7 +30,12 @@ export default {
 <!-- PARTE HTML-->
 <template>
     <header>
-        <h1>BoolFix</h1>
+        <h1>BoolFlix <span>Film e Serie TV</span></h1>
+        <nav>
+            <ul>
+                <li><a href="#" v-for="nav in store.navBar">{{ nav.toUpperCase() }}</a></li>
+            </ul>
+        </nav>
         <SearchBar @userChoice="choice" />
     </header>
 </template>
@@ -41,6 +46,31 @@ export default {
 
 header {
     height: $headerHeight;
+    padding: 0 1.25rem;
     border-bottom: .1875rem solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+        font-size: 50px;
+        color: red;
+    }
+
+    span {
+        font-size: 25px;
+        color: $secondaryColor;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+
+        li a {
+            text-decoration: none;
+            padding: 1.25rem;
+            color: red
+        }
+    }
 }
 </style>

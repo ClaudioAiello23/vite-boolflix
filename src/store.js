@@ -15,8 +15,8 @@ export const store = reactive(
         },
 
         searchUser: '', //valore che l'utente inserisce nel campo input per la ricerca dei film
-
         movieResults: [], // array dei risultati dei movies/tv series che contiene la ricerca utente dal campo input
+        navBar: ['Home', 'Film', 'Serie Tv', 'Original', 'La mia lista']
     })
 
 // Una volta creato store.js, lo richiamo come import nel componente principale APP.vue e nel componente che ne richiede l'utilizzo;
