@@ -9,7 +9,9 @@ export const store = reactive(
             apiMovies: 'https://api.themoviedb.org/3/search/movie?', // link API TMDB - Movies
             apiTvSeries: 'https://api.themoviedb.org/3/search/tv?', // link API TMDB -TvSeries
             apiKey: 'd22b0fdd8de41974c28e8ea0ca771862', //chiave API per il mio account tmdb
-            apiLanguage: 'it-IT'
+            apiLanguage: 'it-IT',
+            apiImg: 'https://image.tmdb.org/t/p/',
+            apiSizeImg: 'w342'
         },
 
         searchUser: '', //valore che l'utente inserisce nel campo input per la ricerca dei film

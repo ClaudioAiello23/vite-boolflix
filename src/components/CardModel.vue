@@ -17,6 +17,12 @@ export default {
         }
     },
 
+    computed: {
+        // showImage() {
+        //     return this.store.config.apiImg + this.store.config.apiSizeImg + movie.poster_path
+        // }
+    },
+
     methods: {
         // funzione per convertire valore language e visualizzare flag/bandiera; come default stampa il valore dichiarato
         convertLanguage(language) {
@@ -28,6 +34,10 @@ export default {
                 default:
                     return language
             }
+        },
+
+        showImage(element) {
+            return this.store.config.apiImg + this.store.config.apiSizeImg + element.poster_path
         },
 
         // funzione per convertire feedback/voto da "1 a 10" a "1 a 5" e arrotondare all'intero succesivo (math.ceil)
@@ -42,7 +52,9 @@ export default {
 <!-- PARTE HTML-->
 <template>
     <div class="card_container">
+
         <div class="card_box" v-for="movie in store.movieResults">
+            <div><img v-bind:src="showImage(movie)" alt="img"></div>
 
             <div v-if="movie.title != null">Titolo Movie: {{ movie.title.toUpperCase() }}</div>
             <div v-else>Titolo Serie tv: {{ movie.name.toUpperCase() }}</div>
