@@ -23,5 +23,10 @@ Ps. usate la vostra api key, non quella delle slide.
 - nel component CardModel impostare una v-if per gestire correttamente le chiavi degli oggetti, che nella parte del titolo e titolo originale hanno nomi differenti tra Movies (title, original_title) e TvSeries (name, original_name).
 
 ## MILESTONE 3:
-- il Feedback ricevuto dall'array MovieResults deve essere trasformato in un voto con numero intero da 1 a 5 (invece che da 1 a 10); utilizzare una funzione che divide per 2 il numero iniziale e lo arrotonda all'intero successivo. Dopodichè inserire la funzione nel DOM (component CardModel).
+- seguendo la documentazione, andare a prendere l'immagine di copertina del film dall'Api, considerando che l'api fornisce un link di partenza (incompleto) che và integrato con la dimensione (da aggiungere, a seconda della scelta) e con il poster_path restituito dall'array della chiamata Api.
+Configurato un metodo che faccia la somma dei 3 link, per restituire il link finale che è stato aggiunto con v-bind:src all'immagine del component CardModel.
+- il Feedback/voto ricevuto dall'array MovieResults deve essere trasformato in un voto con numero intero da 1 a 5 (invece che da 1 a 10); utilizzare una funzione che divide per 2 il numero iniziale e lo arrotonda all'intero successivo. Dopodichè inserire la funzione nel DOM (component CardModel).
 - trasformare il numero del Feedback in stelle (utilizzare la libreria Font Awesome), in modo che siano sempre presenti 5 stelle per ogni card, e il numero di voto corrisponderà al numero di stelle piene, mentre il numero di stelle vuote sarà costituito dalla differenza tra il numero di stelle totali (5) e il numero di stelle voto. Utilizzato un ciclo FOR sul dom (component Card Model) per ciclare le stelle fontAwsome.
+
+## MILESTONE 4:
+- 

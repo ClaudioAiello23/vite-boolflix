@@ -36,4 +36,11 @@ export default {
 </template>
 
 <!-- PARTE SCSS-->
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use '../assets/styles/_partials/_variables.scss' as *;
+
+header {
+    height: $headerHeight;
+    border-bottom: .1875rem solid white;
+}
+</style>

@@ -10,3 +10,9 @@ REGOLE GENERALI
 */
 
 // inserire regole css/scss generali (ad es. font nel body, o regole generali che richiamano variabili)
+
+body {
+    height: $defaultHeight;
+    background-color: $primaryColor;
+    color: $secondaryColor;
+}

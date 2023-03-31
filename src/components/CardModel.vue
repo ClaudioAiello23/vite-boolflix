@@ -36,6 +36,7 @@ export default {
             }
         },
 
+        // funzione per somma link generale apiImages + dimensione img + percorso apiImg = link finale immagine
         showImage(element) {
             return this.store.config.apiImg + this.store.config.apiSizeImg + element.poster_path
         },

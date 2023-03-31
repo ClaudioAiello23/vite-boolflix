@@ -28,8 +28,11 @@ export default {
 
 <!-- PARTE SCSS-->
 <style lang="scss">
+@use '../assets/styles/_partials/_variables.scss' as *;
+
 main {
-    background-color: rgb(202, 210, 244);
+    height: calc($defaultHeight - $headerHeight);
+    overflow: auto;
 
     .card_box {
         border: 2px solid black;
